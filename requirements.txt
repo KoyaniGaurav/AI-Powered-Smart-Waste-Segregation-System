@@ -1,0 +1,19 @@
+# requirements.txt
+fastapi
+uvicorn
+tensorflow
+numpy
+pillow
+python-multipart
+sqlalchemy
+pymysql
+bcrypt
+passlib
+python-jose
+email-validator
+
+matplotlib
+seaborn
+scikit-learn
+
+python-dotenv

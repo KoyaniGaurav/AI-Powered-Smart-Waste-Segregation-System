@@ -1,0 +1,814 @@
+{
+    "Black_Battery": {
+        "waste_type": "E-Waste / Hazardous",
+        "recyclable": true,
+        "hazardous": true,
+        "bin_color": "Black",
+        "carbon_impact": "High",
+        "disposal_method": "Handover to authorized e-waste recyclers or pollution control board authorized collection centers.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Medium to High depending on volume",
+            "valuable_materials": [
+                "Lithium",
+                "Cobalt",
+                "Nickel",
+                "Lead",
+                "Manganese"
+            ],
+            "selling_method": "Bulk sale to registered e-waste processors or brand-led buyback programs."
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Severe groundwater contamination and heavy metal leaching if landfilled; toxic fumes if incinerated improperly.",
+        "safety_precautions": [
+            "Do not puncture or incinerate",
+            "Store in a cool dry place away from moisture",
+            "Tape terminals to prevent short-circuiting"
+        ]
+    },
+    "Black_DailyDust": {
+        "waste_type": "Inert Waste / Residual Non-Recyclable",
+        "recyclable": false,
+        "hazardous": false,
+        "bin_color": "Black",
+        "carbon_impact": "Low",
+        "disposal_method": "Municipal landfill disposal.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Contributes to landfill volume; contains microparticles and household dust mites but generally chemically stable.",
+        "safety_precautions": [
+            "Avoid inhaling while transferring",
+            "Keep contained in a sealed bag to prevent airborne dispersion"
+        ]
+    },
+    "Black_Keyboard": {
+        "waste_type": "E-Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Black",
+        "carbon_impact": "Medium",
+        "disposal_method": "E-waste collection drives or localized scrap dealers (Kabadiwalas) handling electronic components.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Low to Medium per unit",
+            "valuable_materials": [
+                "ABS Plastic",
+                "Copper wire",
+                "Silicon pads",
+                "FR-4 circuit board remnants"
+            ],
+            "selling_method": "Sold by weight or per piece to local scrap markets (e.g., Seelampur in Delhi or SJP Road in Bengaluru)."
+        },
+        "reuse_suggestions": [
+            "Repurpose working switches for custom mechanical builds",
+            "Donate to educational institutes for hardware repair training"
+        ],
+        "environmental_impact": "Slow degradation of plastics and microplastic pollution if dumped open environment.",
+        "safety_precautions": [
+            "Do not smash or break apart bare components outdoors",
+            "Wash hands after handling internal wiring"
+        ]
+    },
+    "Black_Microwave": {
+        "waste_type": "Large E-Waste / White Goods",
+        "recyclable": true,
+        "hazardous": true,
+        "bin_color": "Black",
+        "carbon_impact": "High",
+        "disposal_method": "Authorized e-waste recycler pickup or exchange programs run by electronic appliance brands.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "High",
+            "valuable_materials": [
+                "Copper transformer windings",
+                "Steel body",
+                "Aluminum sheets",
+                "Gold-plated PCB traces"
+            ],
+            "selling_method": "Direct negotiation with local e-waste scrap aggregators or formal recycling vendors."
+        },
+        "reuse_suggestions": [
+            "Repair and use as a food warmer",
+            "Utilize the heavy-duty metal casing for storage boxes after stripping circuitry"
+        ],
+        "environmental_impact": "High embedded carbon footprint; potential exposure to beryllium copper in internal components if physically dismantled without proper safety equipment.",
+        "safety_precautions": [
+            "Never open the magnetron casing due to beryllium oxide hazards",
+            "Discharge high-voltage capacitors before handling internal circuits"
+        ]
+    },
+    "Black_Mobile": {
+        "waste_type": "E-Waste",
+        "recyclable": true,
+        "hazardous": true,
+        "bin_color": "Black",
+        "carbon_impact": "High",
+        "disposal_method": "Mobile store drop-off bins, exchange programs, or formal e-waste recyclers.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "High",
+            "valuable_materials": [
+                "Gold",
+                "Silver",
+                "Copper",
+                "Palladium",
+                "Cobalt from battery"
+            ],
+            "selling_method": "Online recommerce platforms (Cashify, Instacash) or registered urban e-waste aggregators."
+        },
+        "reuse_suggestions": [
+            "Use as a dedicated security camera using apps",
+            "Repurpose as a permanent media player or digital clock"
+        ],
+        "environmental_impact": "Loss of scarce precious metals if thrown into municipal bins; high environmental degradation during replacement mining.",
+        "safety_precautions": [
+            "Remove battery if swollen before disposal",
+            "Perform complete factory data reset to protect privacy"
+        ]
+    },
+    "Black_Mouse": {
+        "waste_type": "E-Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Black",
+        "carbon_impact": "Low",
+        "disposal_method": "E-waste collection drop points or standard local electronic repair shops.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "Copper wire",
+                "ABS plastic",
+                "Small scale PCB elements"
+            ],
+            "selling_method": "Sold by piece weight to local electronics scrap dealers."
+        },
+        "reuse_suggestions": [
+            "Salvage scroll wheel and microswitches for DIY repair electronics projects"
+        ],
+        "environmental_impact": "Non-biodegradable plastics accumulate in landfills, lingering for hundreds of years.",
+        "safety_precautions": [
+            "Do not cut the cord inside closed living areas to avoid breathing PVC dust particles"
+        ]
+    },
+    "Black_PCB": {
+        "waste_type": "Industrial E-Waste Component",
+        "recyclable": true,
+        "hazardous": true,
+        "bin_color": "Black",
+        "carbon_impact": "High",
+        "disposal_method": "Must be sent strictly to authorized high-tech precious metal recovery refineries.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "High based on precious metal density",
+            "valuable_materials": [
+                "Gold",
+                "Silver",
+                "Copper",
+                "Tantalum",
+                "Platinum group metals"
+            ],
+            "selling_method": "B2B bulk contract sales to licensed metallurgic recycling corporations."
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Acid washing or open-air burning by informal sector causes devastating air and soil toxic pollution in surrounding communities.",
+        "safety_precautions": [
+            "Wear gloves to handle to prevent glass fiber splinters",
+            "Do not heat, burn, or treat with domestic acids"
+        ]
+    },
+    "Black_Player": {
+        "waste_type": "E-Waste (Audio/Video Equipment)",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Black",
+        "carbon_impact": "Medium",
+        "disposal_method": "Electronic waste drop-off zones or local scrap dealers handling old home appliances.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Medium",
+            "valuable_materials": [
+                "Aluminum",
+                "Copper transformers",
+                "Steel casing",
+                "Plastic panels"
+            ],
+            "selling_method": "Weight-based pricing estimation at standard city metal scrap yards."
+        },
+        "reuse_suggestions": [
+            "Convert casing into vintage style desktop organizers",
+            "Use functional audio amplification circuits for custom stereos"
+        ],
+        "environmental_impact": "Landfill accumulation of plastics and heavy solder materials containing small traces of lead.",
+        "safety_precautions": [
+            "Ensure power cord is fully severed to prevent accidental plugging by children"
+        ]
+    },
+    "Blue_Cardboard": {
+        "waste_type": "Dry Recyclable (Paper based)",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Low",
+        "disposal_method": "Standard dry waste segregation stream or door-to-door paper collectors.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Medium (Stable market rate per kg)",
+            "valuable_materials": [
+                "Cellulose fibers",
+                "Kraft paper pulp"
+            ],
+            "selling_method": "Sold by weight directly to local Kabadiwalas or paper mill agents."
+        },
+        "reuse_suggestions": [
+            "Storage boxes for home moving",
+            "Cut up for use as weed suppressing mulch layer in gardens",
+            "DIY cat scratching pads"
+        ],
+        "environmental_impact": "Highly biodegradable but generates methane gas if trapped anaerobically in wet landfills.",
+        "safety_precautions": [
+            "Keep dry and free of food grease to preserve recycling value",
+            "Flatten boxes to conserve transport energy space"
+        ]
+    },
+    "Blue_Glass": {
+        "waste_type": "Dry Recyclable (Glass)",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Glass collection systems or municipal dry sorting facilities.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Low to Medium",
+            "valuable_materials": [
+                "Cullet (Crushed glass)",
+                "Silica sand equivalent"
+            ],
+            "selling_method": "Sold by weight to local bottle vendors or specialized glass manufacturing aggregators."
+        },
+        "reuse_suggestions": [
+            "Sterilize and use for kitchen spice storage",
+            "DIY decorative indoor planters or candle holders"
+        ],
+        "environmental_impact": "Infinitely recyclable without quality loss, significantly reducing kiln energy requirements in glass factories.",
+        "safety_precautions": [
+            "Handle with thick gloves if cracked or shattered",
+            "Wrap broken pieces in thick paper before placing in bin"
+        ]
+    },
+    "Blue_Metal": {
+        "waste_type": "Dry Recyclable (Metal scrap)",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Local scrap yards, dry waste collection centers, or informal scrap collectors.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "High",
+            "valuable_materials": [
+                "Steel",
+                "Aluminum",
+                "Tin-coated iron"
+            ],
+            "selling_method": "Direct weight-based sale to local metal recyclers or foundry buyers."
+        },
+        "reuse_suggestions": [
+            "Organizing small screws, nails, or stationery in the workshop",
+            "Creative scrap metal sculpture and art installation work"
+        ],
+        "environmental_impact": "Saves up to ninety-five percent of energy compared to extracting virgin metals from raw ores.",
+        "safety_precautions": [
+            "Beware of sharp jagged edges and rust",
+            "Rinse out residual content from metal food cans to avoid insects"
+        ]
+    },
+    "Blue_Paper": {
+        "waste_type": "Dry Recyclable (Paper product)",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Low",
+        "disposal_method": "Dry waste pickup systems or school/office paper collection drives.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Medium",
+            "valuable_materials": [
+                "High-grade paper pulp fibers"
+            ],
+            "selling_method": "Sold to local paper scrap merchants for repulping into newsprint or tissue grades."
+        },
+        "reuse_suggestions": [
+            "Use blank reverse sides for rough calculations or printing drafts",
+            "Shred for packaging cushioning material"
+        ],
+        "environmental_impact": "Reduces deforestation pressures when returned safely to paper mills.",
+        "safety_precautions": [
+            "Do not mix shredded paper loosely without bagging as it blows away easily",
+            "Keep clean of oily substances"
+        ]
+    },
+    "Blue_PaperCups": {
+        "waste_type": "Composite Dry Waste",
+        "recyclable": false,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Dry waste sorting lines or multi-layer plastic processing units.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Very Low to Zero",
+            "valuable_materials": [
+                "Paper fiber matrix bonded with Polyethylene lining"
+            ],
+            "selling_method": "Rarely accepted by standard paper collectors due to separating complications; sold to specialized downcycling plants if clean."
+        },
+        "reuse_suggestions": [
+            "Seedling starter pots for home gardening since paper weakens for root transition"
+        ],
+        "environmental_impact": "Plastic wax coating prevents standard composting, causing long term residue issues in normal sorting lines.",
+        "safety_precautions": [
+            "Empty completely of hot liquids before dropping in bins to avoid contamination of other dry items"
+        ]
+    },
+    "Blue_PlasticBottels": {
+        "waste_type": "Dry Recyclable (PET Plastic)",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Reverse vending machines, municipal plastic bins, or direct sales to waste collectors.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "High (Highly sought after in plastic market)",
+            "valuable_materials": [
+                "PET (Polyethylene Terephthalate) flakes"
+            ],
+            "selling_method": "Sold by weight to plastic recycling aggregators for transformation into polyester fiber textile yarns."
+        },
+        "reuse_suggestions": [
+            "Drip irrigation bottles for household potted plants",
+            "DIY bird feeders"
+        ],
+        "environmental_impact": "Mitigates ocean plastic accumulation and reduces reliance on petroleum feedstocks for fresh plastic creation.",
+        "safety_precautions": [
+            "Crush the bottle to prevent reuse by unauthorized counterfeit beverage fillers"
+        ]
+    },
+    "Blue_PlasticCutlery": {
+        "waste_type": "Low-Value Dry Plastic",
+        "recyclable": false,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Waste-to-energy plants or cement kiln co-processing facilities.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Negligible",
+            "valuable_materials": [
+                "Polystyrene or Polypropylene polymers"
+            ],
+            "selling_method": "Mixed with generic low-grade plastics sold for road construction blends or industrial fuel."
+        },
+        "reuse_suggestions": [
+            "Wash and store for household plant labeling stakes"
+        ],
+        "environmental_impact": "Fragmentizes into pervasive microplastics that enter food chains; rarely recycled due to small weight and high sorting labor costs.",
+        "safety_precautions": [
+            "Clean grease off before discarding to avoid foul smell or pest attraction in dry storage areas"
+        ]
+    },
+    "Blue_PlasticTrashBag": {
+        "waste_type": "Low-Value Flexible Plastic",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Dry plastic collection streams or plastic bag compilation hubs.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "LDPE (Low Density Polyethylene)"
+            ],
+            "selling_method": "Bulk baled collection sold to low-grade film extrusion recyclers."
+        },
+        "reuse_suggestions": [
+            "Reuse multiple times for dry material carrying before final structural failure"
+        ],
+        "environmental_impact": "Easily carried by wind causing animal choking hazards and clogging drainage networks across cities.",
+        "safety_precautions": [
+            "Tie in a loose knot so it does not capture air or entangle sorting conveyor belts"
+        ]
+    },
+    "Blue_PlasticWrapper": {
+        "waste_type": "Multi-Layer Plastic (MLP)",
+        "recyclable": false,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "Medium",
+        "disposal_method": "Sent for co-processing in cement factories or used in specialized asphalt road laying mixtures.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Very Low",
+            "valuable_materials": [
+                "Laminated Plastic and Metal foils"
+            ],
+            "selling_method": "Collected and sold in bulk tons to infrastructure contractors or municipal processors under Extended Producer Responsibility mandates."
+        },
+        "reuse_suggestions": [
+            "Collect tightly into clean plastic bottles to make structural eco-bricks for garden borders"
+        ],
+        "environmental_impact": "Major contributor to visual pollution and drainage blockages; practically impossible to recycle mechanically via standard methods.",
+        "safety_precautions": [
+            "Ensure plastic wrappers are dry to prevent mold growth inside accumulated storage bins"
+        ]
+    },
+    "Blue_StyrofoamCups": {
+        "waste_type": "Expanded Polystyrene (EPS)",
+        "recyclable": false,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "High",
+        "disposal_method": "Specialized high-volume compression collection centers or designated landfills.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero to Negligible",
+            "valuable_materials": [
+                "Polystyrene polymers"
+            ],
+            "selling_method": "Rarely purchased due to high volume, low density transportation costs unless densified first mechanically."
+        },
+        "reuse_suggestions": [
+            "Break into tiny pieces to use as soil aeration filler inside deep heavy ceramic flower planters"
+        ],
+        "environmental_impact": "Occupies extensive landfill volume; breaks down into toxic chemical beads that absorb surrounding ambient toxins.",
+        "safety_precautions": [
+            "Do not attempt to burn at home as it releases highly toxic styrene gas fumes"
+        ]
+    },
+    "Blue_StyrofoamFoodContainer": {
+        "waste_type": "Contaminated Expanded Polystyrene",
+        "recyclable": false,
+        "hazardous": false,
+        "bin_color": "Blue",
+        "carbon_impact": "High",
+        "disposal_method": "Landfill or industrial waste-to-energy incineration plants.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Stays un-degraded in soil environments for centuries; food oil contamination makes it completely useless for standard industrial reclamation.",
+        "safety_precautions": [
+            "Scrape away organic food residues before throwing to prevent active fungal infestations"
+        ]
+    },
+    "Green_AnimalDung": {
+        "waste_type": "Organic Biodegradable Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Low",
+        "disposal_method": "Biogas plant digesters or localized agricultural composting units.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Medium (High utility value in rural markets)",
+            "valuable_materials": [
+                "Nitrogen",
+                "Phosphorus",
+                "Methane source for energy"
+            ],
+            "selling_method": "Sold directly to rural organic farming operations or collective bio-CNG generation plants."
+        },
+        "reuse_suggestions": [
+            "Sun-dry to create traditional fuel cakes",
+            "Mix with farm yard waste for vermicomposting bed setups"
+        ],
+        "environmental_impact": "Emits direct methane gas into the open atmosphere if left untreated in large waterlogged piles.",
+        "safety_precautions": [
+            "Wash hands thoroughly after contact",
+            "Keep separate from kitchen areas to prevent pathogen transfer"
+        ]
+    },
+    "Green_CoffeeGrounds": {
+        "waste_type": "Organic Biodegradable Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Low",
+        "disposal_method": "Wet waste household composting or community aerobic windrow piles.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "Nitrogen-rich organic matter",
+                "Antioxidants"
+            ],
+            "selling_method": "Can be supplied locally to organic gardening nurseries or small-scale body scrub manufacturers."
+        },
+        "reuse_suggestions": [
+            "Direct application as acid-loving plant fertilizer for roses or tomatoes",
+            "Natural refrigerator odor absorber"
+        ],
+        "environmental_impact": "Enriches target soil microbiomes and improves water retention qualities of local ground earth.",
+        "safety_precautions": [
+            "Do not apply thick wet layers directly on plant roots to avoid surface mold formation"
+        ]
+    },
+    "Green_DryLeaf": {
+        "waste_type": "Organic Horticulture Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Low",
+        "disposal_method": "Community park leaf composters or mulching zones.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "Carbon-rich organic mass (Brown matter)"
+            ],
+            "selling_method": "Traded or shared locally within home gardening networks needing brown balancing matter."
+        },
+        "reuse_suggestions": [
+            "Crush to create mulch layers for preserving garden soil moisture",
+            "Essential carbon source material for home compost bins"
+        ],
+        "environmental_impact": "Open burning of leaves releases severe particulate matter (PM2.5) causing breathing problems in urban cities.",
+        "safety_precautions": [
+            "Ensure no plastic tags or wires are mixed within collected leaf heaps"
+        ]
+    },
+    "Green_Eggshells": {
+        "waste_type": "Organic Kitchen Biodegradable",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Low",
+        "disposal_method": "Home compost bins or municipal wet organic processing trucks.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "Calcium carbonate"
+            ],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [
+            "Crush finely and sprinkle around base of garden plants to deter soft-bodied pests like slugs",
+            "Add to indoor houseplant soil for slow-release calcium nutrient boost"
+        ],
+        "environmental_impact": "Decomposes cleanly without offensive odor issues if kept exposed to oxygenated conditions.",
+        "safety_precautions": [
+            "Rinse or let dry briefly to prevent potential salmonella bacteria growth in open containers"
+        ]
+    },
+    "Green_FoodWaste": {
+        "waste_type": "Organic Wet Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Medium",
+        "disposal_method": "Biogas digestion facilities, decentralized community organic waste converters (OWC).",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Medium when processed into high-quality soil conditioners",
+            "valuable_materials": [
+                "Organic nitrogen",
+                "Potassium trace elements",
+                "Bio-gas yield components"
+            ],
+            "selling_method": "Processed bulk compost sales to commercial nurseries, tea estates, or landscaping businesses."
+        },
+        "reuse_suggestions": [
+            "Citrus peels can be utilized to ferment homemade bio-enzyme liquid house cleaners"
+        ],
+        "environmental_impact": "Unsegregated wet food waste generates highly toxic dark leachate liquid that destroys groundwater quality near landfills.",
+        "safety_precautions": [
+            "Drain excessive water liquids before placing into green bins to minimize active foul smell generation"
+        ]
+    },
+    "Green_GarderFlower": {
+        "waste_type": "Organic Horticulture Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Low",
+        "disposal_method": "Temple/Event waste processing channels or community composting.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Low to Medium (High in specific Indian festive contexts)",
+            "valuable_materials": [
+                "Natural pigments",
+                "Essential oil bases",
+                "Organic biomass"
+            ],
+            "selling_method": "Bulk supply to specialized social enterprises processing floral waste into incense sticks or natural colors."
+        },
+        "reuse_suggestions": [
+            "Dry petals for making natural homemade potpourri scent bags",
+            "Extract colors for artistic painting or fabric dyeing dye projects"
+        ],
+        "environmental_impact": "Diverting floral waste from direct river disposal prevents water eutrophication and preserves aquatic fish life.",
+        "safety_precautions": [
+            "Check for attached plastic threads, strings, or metal pins used in decorative garlands"
+        ]
+    },
+    "Green_SpoilFood": {
+        "waste_type": "Organic Wet Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Medium",
+        "disposal_method": "Anaerobic industrial biogas digesters or deep landfill composting sites.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "Methane gas infrastructure feedstock"
+            ],
+            "selling_method": "Delivered to commercial urban bio-methanation plants managed by local municipal bodies."
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Rapid anaerobic decomposition generates intensive methane emission plumes if not capped efficiently.",
+        "safety_precautions": [
+            "Avoid touching active mold growth sections with bare hands",
+            "Keep bin tightly sealed to keep wild flies and animals away"
+        ]
+    },
+    "Green_TeaBags": {
+        "waste_type": "Organic / Composite Kitchen Waste",
+        "recyclable": true,
+        "hazardous": false,
+        "bin_color": "Green",
+        "carbon_impact": "Low",
+        "disposal_method": "Composting systems (only after verifying paper-grade non-plastic composition).",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [
+                "Tannin-rich organic tea residue"
+            ],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [
+            "Cool down used tea bags to place over closed eyes to soothe puffiness",
+            "Buried near plant roots to maintain moisture levels"
+        ],
+        "environmental_impact": "Many modern commercial tea bags contain hidden plastic sealing webs which leave microplastic mesh in finished compost piles.",
+        "safety_precautions": [
+            "Snip off staple pins and synthetic brand tags before putting the bag into organic composters"
+        ]
+    },
+    "Red_BloodSoakedBandages": {
+        "waste_type": "Biomedical / Bio-hazardous Waste",
+        "recyclable": false,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "High",
+        "disposal_method": "Incineration at licensed Common Bio-medical Waste Treatment Facilities (CBWTF).",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "High risk of spreading blood-borne pathogen infections (Hepatitis, HIV) to sanitation workers and animal scavengers.",
+        "safety_precautions": [
+            "Handle using thick rubber gloves and medical forceps",
+            "Must be collected in leak-proof yellow/red bio-hazard marked non-chlorinated plastic bags"
+        ]
+    },
+    "Red_Diapers": {
+        "waste_type": "Sanitary / Non-Recyclable Hazardous Waste",
+        "recyclable": false,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "High",
+        "disposal_method": "High-temperature incineration or deep isolated sanitary landfilling cells.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Superabsorbent polymers (SAP) and plastic outer layers take up to five hundred years to disintegrate in standard soil conditions.",
+        "safety_precautions": [
+            "Roll inside out tightly and seal with external tape or newspaper wrap before throwing",
+            "Keep separate from dry scrap materials"
+        ]
+    },
+    "Red_ExpiredTablets": {
+        "waste_type": "Domestic Hazardous / Pharmaceutical Waste",
+        "recyclable": false,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "Medium",
+        "disposal_method": "Take-back programs organized by pharma associations or secure chemical landfill encapsulation.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Active pharmaceutical ingredients (APIs) leak into public water systems, inducing drug-resistance in wild bacteria and mutating fish populations.",
+        "safety_precautions": [
+            "Keep out of reach of children and stray animals",
+            "Do not crush or flush down household toilets or drains"
+        ]
+    },
+    "Red_SanitaryPad": {
+        "waste_type": "Sanitary / Bio-hazardous Waste",
+        "recyclable": false,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "High",
+        "disposal_method": "Localized small-scale electric incinerators or municipal sanitary waste treatment pipelines.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Creates massive unhygienic working hazards for manual waste pickers who tear unsegregated garbage packages.",
+        "safety_precautions": [
+            "Wrap carefully inside designated paper disposal bags provided by manufacturers or old newspapers marked with a red dot"
+        ]
+    },
+    "Red_SyrupBottles": {
+        "waste_type": "Contaminated Glass/Plastic Packaging",
+        "recyclable": true,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "Medium",
+        "disposal_method": "Disinfection and washing followed by specialized crushing for controlled technical recycling streams.",
+        "earning_potential": true,
+        "recycling_value": {
+            "estimated_value": "Low",
+            "valuable_materials": [
+                "Amber glass cullet",
+                "High-density medical grade plastics"
+            ],
+            "selling_method": "Bulk lot sales from clinics directly to specialized scrap aggregators handling pharmaceutical glass containers."
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Residual chemicals might leach out if dumped on regular open municipal sorting yards.",
+        "safety_precautions": [
+            "Triple rinse internal chamber thoroughly if possible before discarding",
+            "Keep caps loosely fitted to prevent vapor expansion pressures"
+        ]
+    },
+    "Red_UsedGloves": {
+        "waste_type": "Biomedical Waste (Contaminated Plastics/Rubber)",
+        "recyclable": false,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "Medium",
+        "disposal_method": "Autoclaving followed by shredding or high temperature thermal destruction at authorized facilities.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Improper disposal allows black-market operators to wash and illegally repackage them for commercial food outlets.",
+        "safety_precautions": [
+            "Mutilate or cut the gloves into pieces at point of disposal to prevent illegal resale reuse scams",
+            "Do not mix with home office trash"
+        ]
+    },
+    "Red_UsedMasks": {
+        "waste_type": "Sanitary / Potentially Infectious Waste",
+        "recyclable": false,
+        "hazardous": true,
+        "bin_color": "Red",
+        "carbon_impact": "Medium",
+        "disposal_method": "Incineration or shredding after appropriate 72-hour quarantine holding times.",
+        "earning_potential": false,
+        "recycling_value": {
+            "estimated_value": "Zero",
+            "valuable_materials": [],
+            "selling_method": "None"
+        },
+        "reuse_suggestions": [],
+        "environmental_impact": "Polypropylene fiber components degrade slowly into microplastics; elastic loops cause severe entanglement injuries to local urban birds and stray animals.",
+        "safety_precautions": [
+            "Cut the ear loops before throwing away into the red bin",
+            "Store in separate container away from standard domestic kitchen waste zones"
+        ]
+    }
+}

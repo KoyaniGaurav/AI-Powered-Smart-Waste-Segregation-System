@@ -1,0 +1,40 @@
+                             precision    recall  f1-score   support
+
+              Black_Battery       0.95      0.93      0.94        45
+            Black_DailyDust       1.00      1.00      1.00        21
+             Black_Keyboard       0.98      0.93      0.95        45
+            Black_Microwave       0.91      0.93      0.92        45
+               Black_Mobile       1.00      0.96      0.98        45
+                Black_Mouse       0.95      0.93      0.94        44
+                  Black_PCB       1.00      0.98      0.99        44
+               Black_Player       0.88      0.90      0.89        42
+             Blue_Cardboard       0.92      0.92      0.92        61
+                 Blue_Glass       0.88      0.88      0.88        76
+                 Blue_Metal       0.82      0.95      0.88        62
+                 Blue_Paper       0.92      0.90      0.91        81
+             Blue_PaperCups       0.78      0.71      0.75        35
+        Blue_PlasticBottels       0.94      0.88      0.91        72
+        Blue_PlasticCutlery       0.92      0.97      0.94        35
+       Blue_PlasticTrashBag       0.88      0.94      0.91        31
+        Blue_PlasticWrapper       0.84      0.90      0.87        29
+         Blue_StyrofoamCups       0.81      0.81      0.81        32
+Blue_StyrofoamFoodContainer       0.93      0.87      0.90        31
+           Green_AnimalDung       1.00      1.00      1.00        50
+        Green_CoffeeGrounds       0.90      0.90      0.90        29
+              Green_DryLeaf       1.00      1.00      1.00        45
+            Green_Eggshells       0.83      0.94      0.88        32
+            Green_FoodWaste       0.97      0.97      0.97        33
+         Green_GarderFlower       1.00      1.00      1.00        36
+            Green_SpoilFood       1.00      0.95      0.97        19
+              Green_TeaBags       0.79      0.72      0.75        32
+    Red_BloodSoakedBandages       0.98      1.00      0.99        96
+                Red_Diapers       1.00      0.96      0.98        27
+         Red_ExpiredTablets       0.97      0.97      0.97        96
+            Red_SanitaryPad       1.00      0.96      0.98        24
+           Red_SyrupBottles       0.98      1.00      0.99        96
+             Red_UsedGloves       1.00      1.00      1.00        96
+              Red_UsedMasks       1.00      0.99      0.99        96
+
+                   accuracy                           0.94      1683
+                  macro avg       0.93      0.93      0.93      1683
+               weighted avg       0.94      0.94      0.94      1683
