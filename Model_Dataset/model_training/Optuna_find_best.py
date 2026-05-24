@@ -1,7 +1,4 @@
-# =========================
 # IMPORT REQUIRED LIBRARIES
-# =========================
-
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import optuna
@@ -27,16 +24,10 @@ from tensorflow.keras.applications.efficientnet import preprocess_input
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 
-# =========================
 # MIXED PRECISION
-# =========================
-
 mixed_precision.set_global_policy('mixed_float16')
 
-# =========================
 # CHECK GPU
-# =========================
-
 print("TensorFlow Version:", tf.__version__)
 
 gpus = tf.config.list_physical_devices('GPU')
@@ -52,20 +43,14 @@ else:
 
     print("GPU NOT detected. Running on CPU")
 
-# =========================
 # DATASET PATHS
-# =========================
-
 train_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/train"
 
 val_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/val"
 
 test_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/test"
 
-# =========================
 # DATA GENERATORS
-# =========================
-
 train_datagen = ImageDataGenerator(
 
     preprocessing_function=preprocess_input,
@@ -84,10 +69,7 @@ val_datagen = ImageDataGenerator(
 
 )
 
-# =========================
 # LOAD DATASETS
-# =========================
-
 train_generator = train_datagen.flow_from_directory(
 
     train_path,
@@ -128,16 +110,10 @@ test_generator = val_datagen.flow_from_directory(
 
 NUM_CLASSES = train_generator.num_classes
 
-# =========================
 # OPTUNA OBJECTIVE FUNCTION
-# =========================
-
 def objective(trial):
 
-    # -------------------------
     # MODEL SELECTION
-    # -------------------------
-
     model_name = trial.suggest_categorical(
 
         "model_name",
@@ -151,10 +127,7 @@ def objective(trial):
 
     )
 
-    # -------------------------
     # HYPERPARAMETERS
-    # -------------------------
-
     learning_rate = trial.suggest_float(
 
         "learning_rate",
@@ -210,10 +183,7 @@ def objective(trial):
 
     )
 
-    # -------------------------
     # LOAD BACKBONE MODEL
-    # -------------------------
-
     if model_name == "EfficientNetB0":
 
         conv_base = EfficientNetB0(
@@ -262,16 +232,10 @@ def objective(trial):
 
         )
 
-    # -------------------------
     # FREEZE BACKBONE
-    # -------------------------
-
     conv_base.trainable = False
 
-    # -------------------------
     # BUILD MODEL
-    # -------------------------
-
     model = Sequential()
 
     model.add(conv_base)
@@ -291,7 +255,6 @@ def objective(trial):
     model.add(Dropout(dropout1))
 
     # Optional Second Dense Layer
-
     if use_second_dense:
 
         model.add(Dense(
@@ -305,7 +268,6 @@ def objective(trial):
         model.add(Dropout(dropout2))
 
     # Output Layer
-
     model.add(Dense(
 
         NUM_CLASSES,
@@ -316,10 +278,7 @@ def objective(trial):
 
     ))
 
-    # -------------------------
     # COMPILE MODEL
-    # -------------------------
-
     model.compile(
 
         optimizer=tf.keras.optimizers.Adam(
@@ -334,10 +293,7 @@ def objective(trial):
 
     )
 
-    # -------------------------
     # CALLBACKS
-    # -------------------------
-
     early_stop = tf.keras.callbacks.EarlyStopping(
 
         monitor='val_loss',
@@ -348,10 +304,7 @@ def objective(trial):
 
     )
 
-    # -------------------------
     # TRAIN MODEL
-    # -------------------------
-
     history = model.fit(
 
         train_generator,
@@ -366,28 +319,19 @@ def objective(trial):
 
     )
 
-    # -------------------------
     # GET BEST VALIDATION ACCURACY
-    # -------------------------
-
     best_val_acc = max(
 
         history.history['val_accuracy']
 
     )
 
-    # -------------------------
     # CLEAR SESSION
-    # -------------------------
-
     tf.keras.backend.clear_session()
 
     return best_val_acc
 
-# =========================
 # RUN OPTUNA STUDY
-# =========================
-
 study = optuna.create_study(
 
     direction='maximize'
@@ -402,10 +346,7 @@ study.optimize(
 
 )
 
-# =========================
 # BEST PARAMETERS
-# =========================
-
 print("\n=========================")
 print("BEST TRIAL PARAMETERS")
 print("=========================\n")
@@ -414,10 +355,7 @@ print(study.best_trial.params)
 
 best_params = study.best_trial.params
 
-# =========================
 # SAVE TRIAL RESULTS
-# =========================
-
 results_df = study.trials_dataframe()
 
 results_df.to_csv(
@@ -430,10 +368,7 @@ results_df.to_csv(
 
 print("\nOptuna Results Saved")
 
-# =========================
 # BEST MODEL SUMMARY
-# =========================
-
 print("\n=========================")
 print("BEST MODEL CONFIGURATION")
 print("=========================\n")

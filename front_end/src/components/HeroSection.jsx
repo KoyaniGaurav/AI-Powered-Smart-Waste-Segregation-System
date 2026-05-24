@@ -82,7 +82,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-3 rounded-full border border-brand/15 bg-white/75 px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-brand dark:bg-slate-950/45"
               >
                 <HiGlobeAlt className="text-base" />
-                Cleaner sorting. Smarter action.
+                WasteIQ AI
               </motion.div>
 
               <motion.h1
@@ -91,7 +91,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.08 }}
                 className="mt-6 max-w-4xl font-heading text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-[4.35rem]"
               >
-                Turn everyday waste into clear, confident disposal decisions
+                AI Powered Smart Waste Segregation & Recycling Analysis Platform
               </motion.h1>
 
               <motion.p

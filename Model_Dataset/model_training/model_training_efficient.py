@@ -1,7 +1,4 @@
-# =========================
 # IMPORT REQUIRED LIBRARIES
-# =========================
-
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -18,10 +15,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 
 
-# =========================
 # CHECK GPU
-# =========================
-
 print("TensorFlow Version:", tf.__version__)
 
 gpus = tf.config.list_physical_devices('GPU')
@@ -37,20 +31,14 @@ else:
 
     print("GPU NOT detected. Running on CPU")
 
-# =========================
 # DATASET PATHS
-# =========================
-
 train_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/train"
 
 val_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/val"
 
 test_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/test"
 
-# =========================
 # DATA GENERATORS
-# =========================
-
 train_datagen = ImageDataGenerator(
 
     preprocessing_function=preprocess_input,
@@ -69,10 +57,7 @@ val_datagen = ImageDataGenerator(
 
 )
 
-# =========================
 # LOAD DATASETS
-# =========================
-
 train_generator = train_datagen.flow_from_directory(
 
     train_path,
@@ -111,10 +96,7 @@ test_generator = val_datagen.flow_from_directory(
 
 )
 
-# =========================
 # SAVE CLASS LABELS
-# =========================
-
 class_labels = train_generator.class_indices
 
 with open("E:\AI-Powered Smart Waste Segregation & Recycling Analysis System\\api\class_labels.json", "w") as f:
@@ -126,7 +108,6 @@ print("\nClass labels saved")
 NUM_CLASSES = train_generator.num_classes
 
 # BUILD FINAL MODEL
-
 conv_base = EfficientNetB0(
 
     weights='imagenet',
@@ -137,16 +118,10 @@ conv_base = EfficientNetB0(
 
 )
 
-# =========================
 # FREEZE BACKBONE
-# =========================
-
 conv_base.trainable = False
 
-# =========================
 # MODEL ARCHITECTURE
-# =========================
-
 model = Sequential([
 
     conv_base,
@@ -170,16 +145,10 @@ model = Sequential([
 
 ])
 
-# =========================
 # MODEL SUMMARY
-# =========================
-
 model.summary()
 
-# =========================
 # COMPILE MODEL
-# =========================
-
 model.compile(
 
     optimizer=tf.keras.optimizers.Adam(
@@ -195,10 +164,7 @@ model.compile(
 
 )
 
-# =========================
 # CALLBACKS
-# =========================
-
 early_stop = tf.keras.callbacks.EarlyStopping(
 
     monitor='val_loss',
@@ -235,10 +201,7 @@ reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(
 
 )
 
-# =========================
 # TRAIN MODEL
-# =========================
-
 history = model.fit(
 
     train_generator,
@@ -255,10 +218,7 @@ history = model.fit(
 
 )
 
-# =========================
 # EVALUATE MODEL
-# =========================
-
 test_loss, test_acc = model.evaluate(test_generator)
 
 print("\n=========================")
@@ -269,18 +229,12 @@ print("\nTest Accuracy:", test_acc)
 
 print("Test Loss:", test_loss)
 
-# =========================
 # SAVE FINAL MODEL
-# =========================
-
 model.save("E:\AI-Powered Smart Waste Segregation & Recycling Analysis System\\api\\final_waste_classifier.h5")
 
 print("\nFinal Model Saved")
 
-# =========================
 # ACCURACY GRAPH
-# =========================
-
 plt.figure(figsize=(10,5))
 
 plt.plot(
@@ -311,10 +265,7 @@ plt.savefig("accuracy_graph.png")
 
 plt.close()
 
-# =========================
 # LOSS GRAPH
-# =========================
-
 plt.figure(figsize=(10,5))
 
 plt.plot(
@@ -345,20 +296,14 @@ plt.savefig("loss_graph.png")
 
 plt.close()
 
-# =========================
 # PREDICTIONS
-# =========================
-
 y_pred = model.predict(test_generator)
 
 y_pred_classes = np.argmax(y_pred, axis=1)
 
 y_true = test_generator.classes
 
-# =========================
 # CONFUSION MATRIX
-# =========================
-
 cm = confusion_matrix(
 
     y_true,
@@ -393,10 +338,7 @@ plt.close()
 
 print("\nConfusion Matrix Saved")
 
-# =========================
 # CLASSIFICATION REPORT
-# =========================
-
 class_names = list(
 
     test_generator.class_indices.keys()
@@ -420,7 +362,6 @@ print("=========================\n")
 print(report)
 
 # Save report
-
 with open("classification_report.txt", "w") as f:
 
     f.write(report)

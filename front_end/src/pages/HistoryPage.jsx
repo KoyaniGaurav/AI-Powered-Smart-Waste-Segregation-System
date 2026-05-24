@@ -257,10 +257,10 @@ export default function HistoryPage() {
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-brand">
-                  My history
+                  WasteIQ AI history
                 </p>
                 <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight">
-                  Your saved waste prediction history
+                  Your saved WasteIQ AI prediction history
                 </h1>
                 <p className="mt-4 max-w-2xl text-base leading-8 text-muted">
                   Revisit the predictions you chose to keep, search by waste type,

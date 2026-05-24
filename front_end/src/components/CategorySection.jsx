@@ -49,7 +49,7 @@ export default function CategorySection() {
         <SectionHeading
           eyebrow="Waste Streams"
           title="Color-coded guidance users can understand instantly"
-          description="EcoVision AI translates model predictions into practical bin-routing guidance so the next action feels clear, not technical."
+          description="WasteIQ AI translates model predictions into practical bin-routing guidance so the next action feels clear, not technical."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">

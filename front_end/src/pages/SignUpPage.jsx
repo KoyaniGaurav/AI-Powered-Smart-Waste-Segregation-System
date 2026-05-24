@@ -91,10 +91,10 @@ export default function SignUpPage() {
               className="glass-panel overflow-hidden p-8 sm:p-10"
             >
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand">
-                Create account
+                Join WasteIQ AI
               </p>
               <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight">
-                Build your personal waste intelligence dashboard
+                Build your personal WasteIQ AI dashboard
               </h1>
               <p className="mt-4 text-base leading-8 text-muted">
                 Save the predictions that matter, revisit them anytime, and keep a

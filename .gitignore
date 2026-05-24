@@ -1,6 +1,4 @@
-# =========================
 # PYTHON
-# =========================
 
 __pycache__/
 *.py[cod]
@@ -10,77 +8,46 @@ __pycache__/
 dist/
 build/
 
-# =========================
 # VIRTUAL ENVIRONMENT
-# =========================
 
 venv/
 env/
 tfenv/
 
-# =========================
 # FASTAPI / UVICORN
-# =========================
 
 *.log
 
-# =========================
 # DATABASE
-# =========================
-
 *.db
 *.sqlite3
 
-# =========================
 # MODEL FILES
-# =========================
-
 *.h5
 *.keras
 *.ckpt
 
-# =========================
 # DATASET FOLDERS
-# =========================
-
 Model_Dataset/dataset/
 Model_Dataset/dataset_split/
 Model_Dataset/data_fetching/
 
-# =========================
 # UPLOADS
-# =========================
-
 api/uploads/
 
-# =========================
 # NODE MODULES
-# =========================
-
 front_end/node_modules/
 
-# =========================
 # FRONTEND BUILD
-# =========================
-
 front_end/dist/
 front_end/build/
 
-# =========================
 # ENV FILES
-# =========================
-
 .env
 
-# =========================
 # VS CODE
-# =========================
-
 .vscode/
 
-# =========================
 # SYSTEM FILES
-# =========================
-
 .DS_Store
 Thumbs.db

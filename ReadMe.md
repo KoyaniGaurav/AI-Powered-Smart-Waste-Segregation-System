@@ -1,8 +1,10 @@
 # README.md
 
-# AI Powered Smart Waste Segregation & Recycling Analysis System
+# WasteIQ AI
 
-An AI-powered waste classification and recycling analysis platform that uses Deep Learning and Computer Vision to identify waste items, recommend the correct waste bin, and provide recycling insights.
+AI Powered Smart Waste Segregation & Recycling Analysis Platform.
+
+WasteIQ AI is an AI-powered waste classification and recycling analysis platform that identifies waste items, recommends the correct waste bin, and provides recycling insights.
 
 The system supports:
 

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { HiBars3BottomRight, HiClock, HiUserCircle, HiXMark } from "react-icons/hi2";
+import { HiBars3BottomRight, HiClock, HiXMark } from "react-icons/hi2";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import ThemeToggle from "./ThemeToggle";
@@ -65,13 +65,16 @@ export default function Navbar({ theme, toggleTheme }) {
       >
         <div className="flex items-center justify-between px-2 py-3">
           <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright via-brand to-brand-moss text-lg font-extrabold text-white shadow-lg shadow-brand/20">
-              E
+            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-950 via-brand to-brand-moss text-sm font-extrabold text-white shadow-lg shadow-brand/25">
+              <span className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_32%)]" />
+              <span className="relative">WI</span>
             </div>
             <div>
-              <p className="font-heading text-lg font-bold tracking-tight">EcoVision AI</p>
-              <p className="text-xs uppercase tracking-[0.28em] text-muted">
-                Smart Waste Intelligence
+              <p className="font-heading text-lg font-bold tracking-tight">
+                WasteIQ <span className="text-brand">AI</span>
+              </p>
+              <p className="max-w-[18rem] text-[0.66rem] uppercase tracking-[0.18em] text-muted">
+                AI Powered Smart Waste Segregation & Recycling Analysis Platform
               </p>
             </div>
           </Link>
@@ -164,6 +167,18 @@ export default function Navbar({ theme, toggleTheme }) {
             className="section-shell mt-3 rounded-3xl border border-white/10 bg-panel/90 p-5 shadow-glow backdrop-blur-xl lg:hidden"
           >
             <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3 rounded-2xl border border-line bg-white/60 p-4 dark:bg-slate-950/35">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-slate-950 via-brand to-brand-moss text-xs font-extrabold text-white">
+                  WI
+                </div>
+                <div>
+                  <p className="font-heading text-base font-bold">WasteIQ AI</p>
+                  <p className="text-xs leading-5 text-muted">
+                    AI Powered Smart Waste Segregation & Recycling Analysis Platform
+                  </p>
+                </div>
+              </div>
+
               {navLinks.map((link) =>
                 link.type === "route" ? (
                   <NavLink

@@ -75,14 +75,14 @@ export default function LoginPage() {
               className="glass-panel overflow-hidden p-8 sm:p-10"
             >
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand">
-                Welcome back
+                Welcome back to WasteIQ AI
               </p>
               <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight">
                 Log in to save and manage your waste predictions
               </h1>
               <p className="mt-4 text-base leading-8 text-muted">
-                Access your personal prediction history, save new classifications,
-                and keep your waste analysis journey organized in one place.
+                Access your WasteIQ AI prediction history, save new classifications,
+                and keep your recycling analysis journey organized in one place.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">

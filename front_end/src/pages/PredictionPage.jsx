@@ -142,10 +142,10 @@ export default function PredictionPage() {
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
                 <span className="inline-flex rounded-full border border-brand/20 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.32em] text-brand dark:bg-slate-950/45">
-                  Prediction workspace
+                  WasteIQ AI Prediction
                 </span>
                 <h1 className="mt-5 font-heading text-4xl font-bold tracking-tight sm:text-5xl">
-                  Upload waste photos and get clear disposal guidance
+                  Upload waste photos with WasteIQ AI
                 </h1>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
                   Review a clean result experience with formatted waste labels, bin

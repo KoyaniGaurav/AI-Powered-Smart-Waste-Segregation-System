@@ -9,7 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import PredictionPage from "./pages/PredictionPage";
 import SignUpPage from "./pages/SignUpPage";
 
-const STORAGE_KEY = "ecovision-theme";
+const STORAGE_KEY = "wasteiq-theme";
 
 function getInitialTheme() {
   if (typeof window === "undefined") {
