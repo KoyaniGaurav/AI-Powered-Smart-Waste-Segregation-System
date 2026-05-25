@@ -32,11 +32,11 @@ else:
     print("GPU NOT detected. Running on CPU")
 
 # DATASET PATHS
-train_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/train"
+train_path = "..."
 
-val_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/val"
+val_path = "..."
 
-test_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/test"
+test_path = "..."
 
 # DATA GENERATORS
 train_datagen = ImageDataGenerator(
@@ -99,11 +99,10 @@ test_generator = val_datagen.flow_from_directory(
 # SAVE CLASS LABELS
 class_labels = train_generator.class_indices
 
-with open("E:\AI-Powered Smart Waste Segregation & Recycling Analysis System\\api\class_labels.json", "w") as f:
+with open("...", "w") as f:
 
     json.dump(class_labels, f)
 
-print("\nClass labels saved")
 
 NUM_CLASSES = train_generator.num_classes
 
@@ -177,7 +176,7 @@ early_stop = tf.keras.callbacks.EarlyStopping(
 
 checkpoint = tf.keras.callbacks.ModelCheckpoint(
 
-    "E:\AI-Powered Smart Waste Segregation & Recycling Analysis System\\api\\best_waste_model.h5",
+    "...",
 
     monitor='val_accuracy',
 
@@ -230,7 +229,7 @@ print("\nTest Accuracy:", test_acc)
 print("Test Loss:", test_loss)
 
 # SAVE FINAL MODEL
-model.save("E:\AI-Powered Smart Waste Segregation & Recycling Analysis System\\api\\final_waste_classifier.h5")
+model.save("...")
 
 print("\nFinal Model Saved")
 

@@ -51,6 +51,3 @@ front_end/build/
 # SYSTEM FILES
 .DS_Store
 Thumbs.db
-
-#docker
-.env.example

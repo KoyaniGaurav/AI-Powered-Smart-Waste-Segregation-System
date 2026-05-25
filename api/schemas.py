@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, validator
 
 
 class SignUpRequest(BaseModel):
@@ -6,7 +6,7 @@ class SignUpRequest(BaseModel):
     email: str = Field(min_length=5, max_length=255)
     password: str = Field(min_length=6, max_length=128)
 
-    @field_validator("email")
+    @validator("email")
     @classmethod
     def validate_email(cls, value: str) -> str:
         normalized = value.strip().lower()
@@ -19,7 +19,7 @@ class LoginRequest(BaseModel):
     email: str = Field(min_length=5, max_length=255)
     password: str = Field(min_length=6, max_length=128)
 
-    @field_validator("email")
+    @validator("email")
     @classmethod
     def validate_email(cls, value: str) -> str:
         normalized = value.strip().lower()

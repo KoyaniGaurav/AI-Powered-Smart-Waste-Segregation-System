@@ -1,30 +1,64 @@
-version: "3.9"
-
 services:
+
   mysql:
     image: mysql:8.0
     container_name: wasteiq-mysql
+
     restart: always
+
+    env_file:
+      - .env
+
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: waste_segmentation_db
-      MYSQL_USER: gaurav
-      MYSQL_PASSWORD: 426610Gk#04
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
     ports:
       - "3306:3306"
+
     volumes:
       - mysql_data:/var/lib/mysql
 
+    networks:
+      - wasteiq-network
+
+
+
   api:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+
     container_name: wasteiq-api
+
     restart: always
+
     depends_on:
       - mysql
+
+    env_file:
+      - .env
+
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+
     ports:
       - "8000:8000"
-    environment:
-      DATABASE_URL: mysql+pymysql://gaurav:426610Gk%2304@mysql:3306/waste_segmentation_db
+
+    volumes:
+      - ./api/uploads:/app/api/uploads
+
+    networks:
+      - wasteiq-network
+
+
 
 volumes:
   mysql_data:
+
+
+
+networks:
+  wasteiq-network:

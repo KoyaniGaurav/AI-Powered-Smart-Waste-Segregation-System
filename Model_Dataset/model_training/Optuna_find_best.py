@@ -44,11 +44,11 @@ else:
     print("GPU NOT detected. Running on CPU")
 
 # DATASET PATHS
-train_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/train"
+train_path = "..."
 
-val_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/val"
+val_path = "..."
 
-test_path = "/mnt/e/AI-Powered Smart Waste Segregation & Recycling Analysis System/dataset_split/test"
+test_path = "..."
 
 # DATA GENERATORS
 train_datagen = ImageDataGenerator(
@@ -358,13 +358,7 @@ best_params = study.best_trial.params
 # SAVE TRIAL RESULTS
 results_df = study.trials_dataframe()
 
-results_df.to_csv(
-
-    "optuna_results.csv",
-
-    index=False
-
-)
+results_df.to_csv("optuna_results.csv",index=False)
 
 print("\nOptuna Results Saved")
 
