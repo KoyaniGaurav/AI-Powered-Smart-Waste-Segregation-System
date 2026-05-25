@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: wasteiq-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: waste_segmentation_db
+      MYSQL_USER: gaurav
+      MYSQL_PASSWORD: 426610Gk#04
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  api:
+    build: .
+    container_name: wasteiq-api
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: mysql+pymysql://gaurav:426610Gk%2304@mysql:3306/waste_segmentation_db
+
+volumes:
+  mysql_data:
