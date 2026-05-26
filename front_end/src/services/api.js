@@ -1,9 +1,11 @@
 import axios from "axios";
 
 export const AUTH_STORAGE_KEY = "wasteiq-auth";
+const envApiUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || "/backend";
+const apiBaseUrl = envApiUrl.replace(/\/+$/, "") || "/backend";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "/backend",
+  baseURL: apiBaseUrl,
   timeout: 30000,
 });
 

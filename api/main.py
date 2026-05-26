@@ -1,7 +1,9 @@
 import io
 import json
+import os
 import uuid
 from pathlib import Path
+from urllib.parse import quote
 
 import numpy as np
 import tensorflow as tf
@@ -20,12 +22,33 @@ from schemas import LoginRequest, SavePredictionRequest, SignUpRequest
 from security import create_session_token, hash_password, verify_password
 
 BASE_DIR = Path(__file__).resolve().parent
-UPLOAD_FOLDER = BASE_DIR / "uploads"
-MODEL_PATH = BASE_DIR / "models" / "best_waste_model.h5"
-CLASS_LABELS_PATH = BASE_DIR / "class_labels.json"
-WASTE_INFO_PATH = BASE_DIR / "waste_info.json"
+UPLOAD_FOLDER = Path(os.getenv("UPLOADS_DIR", BASE_DIR / "uploads")).resolve()
+MODEL_PATH = Path(os.getenv("MODEL_PATH", BASE_DIR / "models" / "best_waste_model.h5")).resolve()
+CLASS_LABELS_PATH = Path(os.getenv("CLASS_LABELS_PATH", BASE_DIR / "class_labels.json")).resolve()
+WASTE_INFO_PATH = Path(os.getenv("WASTE_INFO_PATH", BASE_DIR / "waste_info.json")).resolve()
+
+DEFAULT_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+BACKEND_BASE_URL = os.getenv("BACKEND_BASE_URL", "http://localhost:8000").rstrip("/")
 
 UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
+
+
+def parse_allowed_origins() -> list[str]:
+    raw_value = os.getenv("CORS_ALLOWED_ORIGINS", "")
+    configured_origins = [origin.strip() for origin in raw_value.split(",") if origin.strip()]
+
+    if not configured_origins:
+        return DEFAULT_ALLOWED_ORIGINS
+
+    return list(dict.fromkeys([*DEFAULT_ALLOWED_ORIGINS, *configured_origins]))
+
+
+def extract_filename(image_path: str) -> str:
+    normalized_path = str(image_path or "").replace("\\", "/")
+    return normalized_path.rsplit("/", 1)[-1]
 
 def ensure_database_schema():
     inspector = inspect(engine)
@@ -76,7 +99,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=parse_allowed_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -131,12 +154,12 @@ def normalize_prediction(predicted_label: str):
 
 
 def get_uploaded_file_url(image_path: str) -> str:
-    filename = Path(image_path).name
-    return f"/backend/uploads/{filename}"
+    filename = extract_filename(image_path)
+    return f"{BACKEND_BASE_URL}/uploads/{quote(filename)}"
 
 
 def normalize_image_path(image_path: str) -> str:
-    filename = Path(image_path).name
+    filename = extract_filename(image_path)
     candidate = (UPLOAD_FOLDER / filename).resolve()
     uploads_root = UPLOAD_FOLDER.resolve()
 
