@@ -4,6 +4,7 @@ import os
 import uuid
 from pathlib import Path
 from urllib.parse import quote
+from dotenv import load_dotenv
 
 import numpy as np
 import tensorflow as tf
@@ -21,6 +22,7 @@ from models import Base, User, UserSession, WastePrediction
 from schemas import LoginRequest, SavePredictionRequest, SignUpRequest
 from security import create_session_token, hash_password, verify_password
 
+load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 UPLOAD_FOLDER = Path(os.getenv("UPLOADS_DIR", BASE_DIR / "uploads")).resolve()
 MODEL_PATH = Path(os.getenv("MODEL_PATH", BASE_DIR / "models" / "best_waste_model.h5")).resolve()
