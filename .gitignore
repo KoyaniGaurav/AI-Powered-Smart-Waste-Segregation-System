@@ -23,8 +23,6 @@ tfenv/
 *.sqlite3
 
 # MODEL FILES
-*.h5
-*.keras
 *.ckpt
 
 # DATASET FOLDERS
