@@ -29,23 +29,37 @@ MODEL_PATH = Path(os.getenv("MODEL_PATH", BASE_DIR / "models" / "best_waste_mode
 CLASS_LABELS_PATH = Path(os.getenv("CLASS_LABELS_PATH", BASE_DIR / "class_labels.json")).resolve()
 WASTE_INFO_PATH = Path(os.getenv("WASTE_INFO_PATH", BASE_DIR / "waste_info.json")).resolve()
 
-DEFAULT_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+# DEFAULT_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",
+#     "http://127.0.0.1:5173",
+# ]
+
+app = FastAPI(
+    title="AI Powered Smart Waste Segregation API",
+    version="1.0",
+    description="Waste classification and recycling analysis system",
+)
+
+cors_origins = os.getenv(
+    "CORS_ALLOWED_ORIGINS",
+    "http://localhost:5173,http://127.0.0.1:5173"
+)
+
+allowed_origins = [origin.strip() for origin in cors_origins.split(",")]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=allowed_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 BACKEND_BASE_URL = os.getenv("BACKEND_BASE_URL", "http://localhost:8000").rstrip("/")
 
 UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 
-
-def parse_allowed_origins() -> list[str]:
-    raw_value = os.getenv("CORS_ALLOWED_ORIGINS", "")
-    configured_origins = [origin.strip() for origin in raw_value.split(",") if origin.strip()]
-
-    if not configured_origins:
-        return DEFAULT_ALLOWED_ORIGINS
-
-    return list(dict.fromkeys([*DEFAULT_ALLOWED_ORIGINS, *configured_origins]))
 
 
 def extract_filename(image_path: str) -> str:
@@ -93,19 +107,7 @@ class_names = sorted(class_indices, key=class_indices.get)
 with WASTE_INFO_PATH.open("r", encoding="utf-8") as file:
     waste_info = json.load(file)
 
-app = FastAPI(
-    title="AI Powered Smart Waste Segregation API",
-    version="1.0",
-    description="Waste classification and recycling analysis system",
-)
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=parse_allowed_origins(),
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 app.mount("/uploads", StaticFiles(directory=str(UPLOAD_FOLDER)), name="uploads")
 
