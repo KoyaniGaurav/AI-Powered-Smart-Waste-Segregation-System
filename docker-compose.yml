@@ -3,23 +3,31 @@ services:
     image: mysql:8.0
     container_name: wasteiq-mysql
     restart: always
+
+    command: --default-authentication-plugin=mysql_native_password
+
     env_file:
       - .env
+
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
     ports:
       - "3306:3306"
+
     volumes:
       - mysql_data:/var/lib/mysql
+
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p${MYSQL_ROOT_PASSWORD} || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 10
       start_period: 30s
+
     networks:
       - wasteiq-network
 
@@ -27,23 +35,34 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+
     container_name: wasteiq-api
+
     restart: always
+
     depends_on:
       mysql:
         condition: service_healthy
+
     env_file:
       - .env
+
     environment:
       DATABASE_URL: ${DATABASE_URL}
-      BACKEND_BASE_URL: ${BACKEND_BASE_URL:-http://localhost:8000}
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      BACKEND_BASE_URL: ${BACKEND_BASE_URL}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS}
+
       UPLOADS_DIR: /app/api/uploads
       MODEL_PATH: /app/api/models/best_waste_model.h5
+
+      PYTHONUNBUFFERED: 1
+
     ports:
       - "8000:8000"
+
     volumes:
       - ./api/uploads:/app/api/uploads
+
     networks:
       - wasteiq-network
 
@@ -52,3 +71,4 @@ volumes:
 
 networks:
   wasteiq-network:
+    driver: bridge

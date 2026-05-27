@@ -1,6 +1,3 @@
-# Backend API image for WasteIQ AI.
-# Build with: docker build -f DockerFile -t wasteiq-api .
-# Run with:   docker run --env-file .env -p 8000:8000 wasteiq-api
 
 FROM python:3.10
 
